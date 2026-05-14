@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { FaGithub } from "react-icons/fa";
 function Hero() {
 
     const fadeInUp = {
@@ -59,8 +60,8 @@ function Hero() {
                         >
                             View My Work
                         </a>
-                        <a href="https://github.com/bhattaraisamaj12" target="_blank" className="group flex items-center justify-center w-10 h-10 rounded-full bg-white/3 backdrop-blur-xl border border-white/10 shadow-[0_5px_20px_rgba(0,0,0,0.4)] transition duration-300 hover:scale-110">
-                            <img src="src\assets\github.png" alt="Github" className="w-5 h-5 invert opacity-80 group-hover:opacity-100 transition" />
+                        <a href="https://github.com/bhattaraisamaj12" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="group flex items-center justify-center w-10 h-10 rounded-full bg-white/3 backdrop-blur-xl border border-white/10 text-gray-300 shadow-[0_5px_20px_rgba(0,0,0,0.4)] transition duration-300 hover:scale-110 hover:text-white">
+                            <FaGithub className="w-5 h-5 opacity-80 group-hover:opacity-100 transition" />
                         </a>
                     </div>
 

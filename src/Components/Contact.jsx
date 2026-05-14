@@ -1,3 +1,6 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 const Contact = () => {
     return (
         <>
@@ -21,14 +24,8 @@ const Contact = () => {
                         </p>
 
                         <h2 className="text-4xl md:text-5xl font-bold text-white">
-                            Let’s Work Together
+                            Let's Work Together
                         </h2>
-
-                        <p className="text-gray-400 mt-6 max-w-2xl mx-auto leading-relaxed">
-                            I’m always open to discussing new projects, creative ideas,
-                            or opportunities to build meaningful digital experiences.
-                        </p>
-
                         {/* Contact Links */}
                         <div className="flex flex-wrap justify-center gap-4 mt-12">
 
@@ -39,7 +36,7 @@ const Contact = () => {
                                 <div
                                     className="w-10 h-10 rounded-full flex items-center justify-center bg-purple-500/20 text-purple-400"
                                 >
-                                    ✉️
+                                    <MdEmail className="w-5 h-5" />
                                 </div>
 
                                 <div className="text-left">
@@ -60,13 +57,9 @@ const Contact = () => {
                                 className="group flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/30 hover:-translate-y-1 transition duration-300"
                             >
                                 <div
-                                    className="w-10 h-10 rounded-full flex items-center justify-center bg-purple-500/20"
+                                    className="w-10 h-10 rounded-full flex items-center justify-center bg-purple-500/20 text-purple-400"
                                 >
-                                    <img
-                                        src="/src/assets/github.png"
-                                        alt="GitHub"
-                                        className="w-5 h-5 invert"
-                                    />
+                                    <FaGithub className="w-5 h-5" />
                                 </div>
 
                                 <div className="text-left">
@@ -89,6 +82,7 @@ const Contact = () => {
                                 <div
                                     className="w-10 h-10 rounded-full flex items-center justify-center bg-purple-500/20 text-purple-400"
                                 >
+                                    <FaLinkedin className="w-5 h-5" />
                                 </div>
 
                                 <div className="text-left">
@@ -115,7 +109,7 @@ const Contact = () => {
                 >
 
                     <p className="text-sm text-gray-500">
-                        © 2026 Samaj Bhattarai. All rights reserved.
+                        &copy; 2026 Samaj Bhattarai. All rights reserved.
                     </p>
 
                     <div className="flex items-center gap-6">
