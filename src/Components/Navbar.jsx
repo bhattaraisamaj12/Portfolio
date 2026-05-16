@@ -35,7 +35,7 @@ function Navbar() {
 
                 {/* CTA Button */}
                 <a
-                    href="contact"
+                    href="#contact"
                     className="hidden md:block bg-[var(--accent)] text-white px-5 py-2 rounded-xl
                      text-[11px] tracking-[0.15em] uppercase font-semibold 
                      hover:opacity-90 transition colo"

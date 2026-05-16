@@ -1,14 +1,28 @@
+import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+
+const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1.6 }
+    }
+};
 
 const Contact = () => {
     return (
         <>
             {/* CONTACT SECTION */}
-            <section
+            <motion.section
                 id="contact"
-                className="py-32 relative overflow-hidden"
-            >
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-100px" }}
+                className="pt-6 pb-10 scroll-mt-28">
+
                 <div className="max-w-5xl mx-auto px-6">
 
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/10 blur-3xl rounded-full">
@@ -98,7 +112,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </motion.section>
 
             {/* FOOTER */}
             <footer className="border-t border-white/10 py-8">

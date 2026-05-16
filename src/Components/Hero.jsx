@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 function Hero() {
 
     const fadeInUp = {
@@ -18,7 +18,7 @@ function Hero() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
-            className="min-h-[85vh] pt-32 md:pt-44" >
+            className="relative min-h-screen flex items-center pt-10">
             <div className="max-w-7xl mx-auto px-2 grid md:grid-cols-2 gap-12 items-start">
 
                 <div className="space-y-6">
@@ -48,7 +48,7 @@ function Hero() {
 
                     <div className="flex gap-4 pt-4">
                         <a
-                            href="contact"
+                            href="#contact"
                             className="px-6 py-3 rounded-full bg-purple-600 text-white text-sm transition-transform duration-300 hover:scale-105 transition shadow-[0_0_20px_rgba(139,92,246,0.4)]"
                         >
                             Get in Touch
@@ -60,8 +60,21 @@ function Hero() {
                         >
                             View My Work
                         </a>
+                    </div>
+                    <div className="flex items-center gap-2 pt-2">
+                        <div className="flex items-center gap-1 mr-2">
+                            <span className="text-sm uppercase tracking-[0.25em] text-gray-400">
+                                Follow
+                            </span>
+
+                            <div className="w-10 h-px bg-white/10"></div>
+                        </div>
                         <a href="https://github.com/bhattaraisamaj12" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="group flex items-center justify-center w-10 h-10 rounded-full bg-white/3 backdrop-blur-xl border border-white/10 text-gray-300 shadow-[0_5px_20px_rgba(0,0,0,0.4)] transition duration-300 hover:scale-110 hover:text-white">
                             <FaGithub className="w-5 h-5 opacity-80 group-hover:opacity-100 transition" />
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/samaj-bhattarai-5704b932a" target="_blank" rel="noopener noreferrer" aria-label="Linkedin" className="group flex items-center justify-center w-10 h-10 rounded-full bg-white/3 backdrop-blur-xl border border-white/10 text-gray-300 shadow-[0_5px_20px_rgba(0,0,0,0.4)] transition duration-300 hover:scale-110 hover:text-white">
+                            <FaLinkedin className="w-5 h-5 opacity-80 group-hover:opacity-100 transition" />
                         </a>
                     </div>
 
@@ -110,6 +123,15 @@ function Hero() {
                     </div>
 
                 </div>
+            </div>
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-3">
+
+                <a href="#about"><p className="text-[11px] tracking-[0.35em] uppercase text-gray-500">
+                    Scroll
+                </p></a>
+
+                <div className="w-[1px] h-10 bg-gradient-to-b from-purple-400 to-transparent animate-pulse"></div>
+
             </div>
         </motion.section>
     );

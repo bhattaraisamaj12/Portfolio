@@ -1,3 +1,14 @@
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1.6 }
+    }
+};
+
 const projectList = [
     {
         title: "Online Food Ordering Platform",
@@ -28,13 +39,19 @@ const projectList = [
             "MySQL",
         ],
 
-        github: "YOUR_GITHUB_LINK",
+        github: "https://github.com/bhattaraisamaj12/Habit-track",
     },
 ];
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-32">
+        <motion.section
+            id="projects"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            className="min-h-screen pt-6 scroll-mt-15">
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="text-center mb-20">
@@ -103,7 +120,7 @@ const Projects = () => {
 
                 </div>
             </div>
-        </section>
+        </motion.section >
     );
 };
 
