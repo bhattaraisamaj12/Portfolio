@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+const MotionSection = motion.section;
+
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     show: {
@@ -45,21 +47,21 @@ const projectList = [
 
 const Projects = () => {
     return (
-        <motion.section
+        <MotionSection
             id="projects"
             variants={fadeInUp}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
-            className="min-h-screen pt-6 scroll-mt-15">
-            <div className="max-w-7xl mx-auto px-6">
+            className="pt-16 md:pt-20 pb-6 md:pb-16 scroll-mt-24">
+            <div className="max-w-7xl mx-auto px-5 sm:px-6">
 
-                <div className="text-center mb-20">
+                <div className="text-center mb-10 md:mb-16">
                     <p className="text-purple-400 uppercase tracking-[0.2em] text-sm mb-4">
                         My Work
                     </p>
 
-                    <h2 className="text-4xl md:text-5xl font-bold text-white">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
                         Featured Projects
                     </h2>
                 </div>
@@ -70,7 +72,7 @@ const Projects = () => {
                     {projectList.map((project) => (
                         <div
                             key={project.title}
-                            className="group relative rounded-3xl overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 transition duration-500 hover:-translate-y-2 hover:border-purple-500/30"
+                            className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 transition duration-500 hover:-translate-y-2 hover:border-purple-500/30"
                         >
                             <div
                                 className="absolute inset-0 bg-purple-500/0 group-hover:bg-purple-500/10 blur-3xl transition duration-500"
@@ -78,9 +80,9 @@ const Projects = () => {
 
 
                             {/* Content */}
-                            <div className="p-4 relative z-10">
+                            <div className="p-5 sm:p-6 relative z-10">
 
-                                <h3 className="text-2xl font-semibold text-white">
+                                <h3 className="text-xl sm:text-2xl font-semibold text-white">
                                     {project.title}
                                 </h3>
 
@@ -120,7 +122,7 @@ const Projects = () => {
 
                 </div>
             </div>
-        </motion.section >
+        </MotionSection >
     );
 };
 

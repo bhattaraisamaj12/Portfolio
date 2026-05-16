@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +13,8 @@ function Navbar() {
     ];
 
     return (
-        <header className="fixed top-6 left-0 w-full z-50 flex justify-center">
-            <div className="w-[90%] max-w-6xl px-6 py-4 flex items-center justify-between bg-[#001325]/90 backdrop-blur-xl border border-white/10 rounded-full shadow-[0_0_40px_rgba(139,92,246,0.15)] ">
+        <header className="fixed top-4 md:top-6 left-0 w-full z-50 flex justify-center px-4">
+            <div className="w-full max-w-6xl px-5 sm:px-6 py-3 md:py-4 flex items-center justify-between bg-[#001325]/90 backdrop-blur-xl border border-white/10 rounded-full shadow-[0_0_40px_rgba(139,92,246,0.15)] ">
 
                 {/* Logo */}
                 <a href="#"><h1 className="text-lg font-semibold tracking-wider">
@@ -45,17 +46,20 @@ function Navbar() {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-[var(--text-primary)] text-xl"
+                    type="button"
+                    aria-label={isOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={isOpen}
+                    className="md:hidden flex h-10 w-10 items-center justify-center rounded-full text-[var(--text-primary)] text-xl"
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    ☰
+                    {isOpen ? <FiX /> : <FiMenu />}
                 </button>
             </div>
 
             {/*Mobile Menu */}
             {isOpen && (
-                <div className="absolute top-full mt-3 left-1/2 -translate-x-1/2 w-[90%] max-w-sm 
-                bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl  p-6 space-y-4
+                <div className="absolute top-full mt-3 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-sm 
+                bg-[#001325]/95 backdrop-blur-xl border border-white/10 rounded-2xl p-5 space-y-4 shadow-[0_20px_45px_rgba(0,0,0,0.35)]
   ">
                     {navLinks.map((link) => (
                         <a

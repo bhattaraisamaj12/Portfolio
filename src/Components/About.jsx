@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+
+const MotionSection = motion.section;
+
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     show: {
@@ -10,20 +13,20 @@ const fadeInUp = {
 
 function About() {
     return (
-        <motion.section
+        <MotionSection
             id="about"
             variants={fadeInUp}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
-            className="flex items-center justify-center px-6 py-16 mt-16 min-h-[90vh] bg-[#05070f]/10 backdrop-blur-xl border-t border-white/5"
+            className="flex items-center justify-center px-5 sm:px-6 py-16 md:py-20 md:mt-8 min-h-[90vh] bg-[#05070f]/10 backdrop-blur-xl border-t border-white/5"
         >
 
-            <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 md:gap-12 items-center">
 
                 {/* LEFT SIDE */}
                 <div className="space-y-6">
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
                         About <span className="text-[var(--accent)]">Me</span>
                     </h2>
 
@@ -50,7 +53,7 @@ function About() {
 
                 {/* RIGHT SIDE (CARD) */}
                 <div className="relative">
-                    <div className="rounded-2xl p-8 bg-white/5 border border-white/10 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+                    <div className="rounded-2xl p-6 sm:p-8 bg-white/5 border border-white/10 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
 
                         <h3 className="text-xl font-semibold mb-4 text-[var(--accent)]">
                             Quick Info
@@ -67,7 +70,7 @@ function About() {
                 </div>
 
             </div>
-        </motion.section >
+        </MotionSection >
     );
 };
 

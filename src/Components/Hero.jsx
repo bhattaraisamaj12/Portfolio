@@ -1,5 +1,8 @@
 import { motion } from "framer-motion"
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+const MotionSection = motion.section;
+
 function Hero() {
 
     const fadeInUp = {
@@ -12,26 +15,26 @@ function Hero() {
     };
 
     return (
-        <motion.section
+        <MotionSection
             id="home"
             variants={fadeInUp}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
-            className="relative min-h-screen flex items-center pt-10">
-            <div className="max-w-7xl mx-auto px-2 grid md:grid-cols-2 gap-12 items-start">
+            className="relative min-h-screen flex items-center pt-28 pb-14 md:pt-24 md:pb-10 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-5 sm:px-6 grid md:grid-cols-2 gap-9 md:gap-16 items-center">
 
-                <div className="space-y-6">
+                <div className="order-2 md:order-1 space-y-6">
 
                     {/* Name */}
-                    <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
                         <span className="text-white">Samaj </span>
                         <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
                             Bhattarai
                         </span>
                     </h1>
 
-                    <p className="text-gray-400 max-w-md">
+                    <p className="text-gray-400 max-w-md text-base sm:text-lg">
                         Translating specifications into robust systems.
                     </p>
 
@@ -46,23 +49,23 @@ function Hero() {
                         ))}
                     </div>
 
-                    <div className="flex gap-4 pt-4">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
                         <a
                             href="#contact"
-                            className="px-6 py-3 rounded-full bg-purple-600 text-white text-sm transition-transform duration-300 hover:scale-105 transition shadow-[0_0_20px_rgba(139,92,246,0.4)]"
+                            className="w-full sm:w-auto px-6 py-3 rounded-full bg-purple-600 text-white text-sm text-center transition-transform duration-300 hover:scale-105 transition shadow-[0_0_20px_rgba(139,92,246,0.4)]"
                         >
                             Get in Touch
                         </a>
 
                         <a
-                            href="projects"
-                            className="px-6 py-3 rounded-full border border-white/10 text-sm text-gray-300 transition-transform duration-300 hover:scale-105 transition"
+                            href="#projects"
+                            className="w-full sm:w-auto px-6 py-3 rounded-full border border-white/10 text-sm text-center text-gray-300 transition-transform duration-300 hover:scale-105 transition"
                         >
                             View My Work
                         </a>
                     </div>
-                    <div className="flex items-center gap-2 pt-2">
-                        <div className="flex items-center gap-1 mr-2">
+                    <div className="flex flex-wrap items-center gap-2 pt-2">
+                        <div className="flex items-center gap-1 mr-2 min-w-full sm:min-w-0">
                             <span className="text-sm uppercase tracking-[0.25em] text-gray-400">
                                 Follow
                             </span>
@@ -81,18 +84,18 @@ function Hero() {
                 </div>
 
                 {/* RIGHT SIDE */}
-                <div className="flex justify-center">
+                <div className="order-1 md:order-2 flex justify-center w-full">
 
-                    <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl w-full max-w-md">
+                    <div className="relative bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-6 backdrop-blur-xl w-full max-w-sm md:max-w-md">
 
                         <div className="absolute inset-0 rounded-2xl 
                             bg-purple-500/20 blur-3xl -z-10"></div>
                         <img
                             src="https://cdn.dribbble.com/userupload/26470486/file/original-2a71d7f1e496feae326d8ab816cd86f9.jpg?resize=400x0"
                             alt="preview"
-                            className="rounded-xl"
+                            className="rounded-xl w-full aspect-[4/3] object-cover"
                         />
-                        <div className="absolute -left-6 top-10">
+                        <div className="absolute left-3 sm:-left-6 top-6 sm:top-10">
                             <div className="flex items-center gap-3 px-4 py-2.5 rounded-full bg-[#0b0b14]/90 backdrop-blur-xl border border-white/10 shadow-[0_8px_25px_rgba(0,0,0,0.5)] float">
                                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-500/20 text-purple-400">
                                     📍
@@ -107,7 +110,7 @@ function Hero() {
                                 </div>
                             </div>
                         </div>
-                        <div className="absolute -right-6 bottom-10">
+                        <div className="absolute right-3 sm:-right-6 bottom-6 sm:bottom-10">
                             <div className="flex items-center gap-3 px-4 py-2.5 rounded-full bg-[#0b0b14]/90 backdrop-blur-xl border border-white/10 shadow-[0_8px_25px_rgba(0,0,0,0.5)] float">
 
                                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-500/20 text-purple-400">
@@ -133,7 +136,7 @@ function Hero() {
                 <div className="w-[1px] h-10 bg-gradient-to-b from-purple-400 to-transparent animate-pulse"></div>
 
             </div>
-        </motion.section>
+        </MotionSection>
     );
 };
 

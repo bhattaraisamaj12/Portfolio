@@ -3,6 +3,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
+    overflow-x: hidden;
 }
 
 :root {
@@ -19,6 +20,8 @@ body {
     background-color: var(--bg);
     color: var(--text-primary);
     font-family: 'Inter', sans-serif;
+    min-width: 320px;
+    overflow-x: hidden;
 }
 
 body::before {

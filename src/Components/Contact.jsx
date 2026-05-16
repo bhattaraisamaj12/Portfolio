@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
+const MotionSection = motion.section;
+
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     show: {
@@ -15,37 +17,37 @@ const Contact = () => {
     return (
         <>
             {/* CONTACT SECTION */}
-            <motion.section
+            <MotionSection
                 id="contact"
                 variants={fadeInUp}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-100px" }}
-                className="pt-6 pb-10 scroll-mt-28">
+                className="relative overflow-hidden px-5 sm:px-6 pt-6 md:pt-16 pb-10 scroll-mt-28">
 
-                <div className="max-w-5xl mx-auto px-6">
+                <div className="max-w-5xl mx-auto">
 
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/10 blur-3xl rounded-full">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-[500px] sm:h-[500px] bg-purple-500/10 blur-3xl rounded-full">
                     </div>
 
 
                     <div
-                        className="relative z-10 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 p-10 md:p-14 text-center"
+                        className="relative z-10 rounded-2xl sm:rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 p-5 sm:p-8 md:p-14 text-center"
                     >
 
                         <p className="text-purple-400 uppercase tracking-[0.2em] text-sm mb-4">
                             Contact
                         </p>
 
-                        <h2 className="text-4xl md:text-5xl font-bold text-white">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
                             Let's Work Together
                         </h2>
                         {/* Contact Links */}
-                        <div className="flex flex-wrap justify-center gap-4 mt-12">
+                        <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-4 mt-8 md:mt-12">
 
                             <a
                                 href="mailto:bhattarai.samaj12@gmail.com"
-                                className="group flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/30 hover:-translate-y-1 transition duration-300"
+                                className="group flex min-w-0 items-center gap-3 px-4 sm:px-6 py-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/30 hover:-translate-y-1 transition duration-300"
                             >
                                 <div
                                     className="w-10 h-10 rounded-full flex items-center justify-center bg-purple-500/20 text-purple-400"
@@ -53,11 +55,11 @@ const Contact = () => {
                                     <MdEmail className="w-5 h-5" />
                                 </div>
 
-                                <div className="text-left">
+                                <div className="min-w-0 text-left">
                                     <p className="text-xs text-gray-400 uppercase tracking-wide">
                                         Email
                                     </p>
-                                    <p className="text-sm font-medium text-white">
+                                    <p className="text-sm font-medium text-white break-all">
                                         bhattarai.samaj12@gmail.com
                                     </p>
                                 </div>
@@ -68,7 +70,7 @@ const Contact = () => {
                                 href="https://github.com/bhattaraisamaj12"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/30 hover:-translate-y-1 transition duration-300"
+                                className="group flex min-w-0 items-center gap-3 px-4 sm:px-6 py-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/30 hover:-translate-y-1 transition duration-300"
                             >
                                 <div
                                     className="w-10 h-10 rounded-full flex items-center justify-center bg-purple-500/20 text-purple-400"
@@ -76,11 +78,11 @@ const Contact = () => {
                                     <FaGithub className="w-5 h-5" />
                                 </div>
 
-                                <div className="text-left">
+                                <div className="min-w-0 text-left">
                                     <p className="text-xs text-gray-400 uppercase tracking-wide">
                                         GitHub
                                     </p>
-                                    <p className="text-sm font-medium text-white">
+                                    <p className="text-sm font-medium text-white break-all">
                                         github.com/bhattaraisamaj12
                                     </p>
                                 </div>
@@ -91,7 +93,7 @@ const Contact = () => {
                                 href="https://www.linkedin.com/in/samaj-bhattarai-5704b932a"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/30 hover:-translate-y-1 transition duration-300"
+                                className="group flex min-w-0 items-center gap-3 px-4 sm:px-6 py-4 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/30 hover:-translate-y-1 transition duration-300"
                             >
                                 <div
                                     className="w-10 h-10 rounded-full flex items-center justify-center bg-purple-500/20 text-purple-400"
@@ -99,11 +101,11 @@ const Contact = () => {
                                     <FaLinkedin className="w-5 h-5" />
                                 </div>
 
-                                <div className="text-left">
+                                <div className="min-w-0 text-left">
                                     <p className="text-xs text-gray-400 uppercase tracking-wide">
                                         LinkedIn
                                     </p>
-                                    <p className="text-sm font-medium text-white">
+                                    <p className="text-sm font-medium text-white break-all">
                                         linkedin.com/samaj-bhattarai
                                     </p>
                                 </div>
@@ -112,12 +114,12 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-            </motion.section>
+            </MotionSection>
 
             {/* FOOTER */}
             <footer className="border-t border-white/10 py-8">
                 <div
-                    className="max-w-7xl mx-auto px-6
+                    className="max-w-7xl mx-auto px-5 sm:px-6
                      flex flex-col md:flex-row
                      items-center justify-between gap-4"
                 >

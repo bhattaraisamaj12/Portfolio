@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { SiJavascript, SiTailwindcss, SiMongodb, SiMysql, SiExpress, SiPostman, SiPostgresql } from "react-icons/si";
 
+const MotionSection = motion.section;
+
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     show: {
@@ -26,18 +28,18 @@ function Skills() {
     ];
 
     return (
-        <motion.section
+        <MotionSection
             id="skills"
             variants={fadeInUp}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="px-6 pt-20 pb-20"
+            className="px-5 sm:px-6 pt-16 md:pt-20 pb-16 md:pb-20"
         >
             <div className="max-w-6xl mx-auto">
 
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold">
+                <div className="text-center mb-10 md:mb-12">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
                         My <span className="text-[var(--accent)]">Skills</span>
                     </h2>
                     <p className="text-white/60 mt-4">
@@ -45,12 +47,12 @@ function Skills() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
 
                     {skills.map((skill, i) => (
                         <div
                             key={i}
-                            className="group flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl hover:scale-105 transition duration-300"
+                            className="group flex min-h-28 flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl hover:scale-105 transition duration-300"
                         >
                             <div className="text-3xl text-white/80 group-hover:text-[var(--accent)] transition">
                                 {skill.icon}
@@ -65,7 +67,7 @@ function Skills() {
                 </div>
 
             </div>
-        </motion.section>
+        </MotionSection>
     );
 }
 
